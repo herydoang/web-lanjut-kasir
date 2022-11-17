@@ -15,11 +15,17 @@
                 <div class="mb-3">
                     <label class="form-label">Kategori</label>
                     <select class="form-select" name="kategori">
-            {% for add in kategori %} {% if get_produk.kategori == kategori %}
+            <!-- For Add in Kategori -->
+            {% for add in kategori %}
+            <!-- Kondisi if else -->
+            {% if get_produk.kategori == kategori %}
             <option value="{{ add.nama }}" selected="selected">{{ add.nama }}</option>
             {% else %}
             <option value="{{ add.nama }}">{{ add.nama }}</option>
-            {% endif %} {% endfor %}
+            <!-- Kondisi if else -->
+            {% endif %}
+            <!-- End For Add in Kategori -->
+            {% endfor %}
           </select>
                 </div>
                 <div class="mb-3">
@@ -28,11 +34,11 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jumlah</label>
-                    <input type="integer" class="form-control" name="jumlah" value="{{ get_produk.jumlah }}" />
+                    <input type="text" class="form-control" name="jumlah" value="{{ get_produk.jumlah }}" />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Deskripsi</label>
-                    <textarea name="deskripsi " type="text " class="form-control">{{ get_produk.deskripsi }}</textarea>
+                    <textarea name="deskripsi" class="form-control">{{ get_produk.deskripsi }}</textarea>
                 </div>
                 <button type=" submit " class="btn btn-primary">Submit</button>
             </form>
