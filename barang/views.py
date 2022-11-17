@@ -68,3 +68,7 @@ def barang_update(request, id):
     }
     
     return render(request, template_name, context)
+
+def barang_delete(request, id):
+    Produk.objects.get(id=id).delete()
+    return redirect(barang_list)   
