@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     
     #My Apps
     'barang',
+    # 'static',
 ]
 
 MIDDLEWARE = [
